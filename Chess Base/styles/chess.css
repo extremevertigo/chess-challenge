@@ -1,0 +1,58 @@
+#viewport {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+chess-board {
+  display: block;
+  background-color: #777;
+  position: relative;
+  z-index: 1;
+  /* Please keep the board this size */
+  width: 90vh;
+  height: 90vh;
+}
+
+chess-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.piece-board{
+  position: absolute;
+  z-index: 1;
+  left: -180px;
+  top: -40px;
+  text-align: center;
+}
+
+.piece-board > div {
+  position: absolute;
+  font-size: 5em;
+  width: calc(90vh / 8);
+  height: calc(90vh / 8);
+}
+
+.board {
+  position: absolute;
+  z-index: -1;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.board > div {
+  width: calc(90vh / 8);
+  height: calc(90vh / 8);
+  box-sizing: border-box;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: black;
+}
