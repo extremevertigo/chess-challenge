@@ -26,7 +26,7 @@ export default class GameEvents {
         pieces.forEach(p => {
             if(p.dataset.startPos === startTile.id){
                 const endTileRect = endTile.getBoundingClientRect();
-                this.animateToPosition(p, endTileRect.left, endTileRect.right);
+                this.animateToPosition(p, endTileRect.left, endTileRect.top);
             }
         });
     }
